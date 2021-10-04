@@ -153,7 +153,7 @@ bool gazebo::GazeboRosgyroSensor::LoadParameters()
   //TOPIC
   if (sdf->HasElement("topicName"))
   {
-    topic_name =  robot_namespace + sdf->Get<std::string>("topicName");
+    topic_name = "/" + sdf->Get<std::string>("topicName");
     ROS_INFO_STREAM("<topicName> set to: "<<topic_name);
   }
   else
